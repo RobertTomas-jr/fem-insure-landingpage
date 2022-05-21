@@ -1,0 +1,113 @@
+@use '../components' as *;
+
+header {
+    height: 80px;
+    padding: 1.25em 1em;
+    width: clamp(375px, 95%, 1024px);
+    margin: auto;
+        
+    .header-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            @include widthheight;
+            transform: translateX(100%);
+            position: absolute;
+            top: 80px;
+            right: 0;
+            z-index: 5;
+            background-color: $VeryDarkViolet;
+            text-align: center;
+            background-image: url('/images/bg-pattern-mobile-nav.svg');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100% 40%;
+            padding: 2em;
+            @include transitioneaseinout;
+    
+            .menu-link {
+                display: block;
+                padding: 0.625em;
+                color: white;
+                font-weight: map-get($fontweight, 
+                "boldWeight");
+                margin: 1em 0;
+                font-size: 1.2rem;
+               
+                &:last-child {
+                    border: 1px solid white;
+                    width: 90%;
+                    margin: auto;
+                    margin-top: 0.8em;
+                    @include transitioneaseinout;
+                }
+                &:hover {
+                    color: VeryDarkViolet;
+                }
+            }
+            &.show{
+                transform: translateX(0);
+                height: 100%;
+                @include transitioneaseinout;
+
+                .menu-link:last-child:hover {
+                    color: $VeryDarkViolet;
+                    background-color: white;
+                }
+                .menu-link:hover {
+                    color: $DarkGrayishViolet;
+                }
+            }
+        }
+        //for hamburger button menu
+        .hamburger-menu {
+            cursor: pointer;
+            .menu-close {
+                display:  none;
+            }
+        }
+    }
+}
+//media queries for 768px
+@include breakpoints(medium) {
+    header {
+        padding: 1.25em 0;
+       .header-wrapper {
+           .menu {
+               all: unset;
+               width: 100%;
+               transform: translateX(0);
+               text-align: end;
+       
+               .menu-link {
+                   display: inline;
+                   color: $VeryDarkViolet;
+                   font-size: 0.9rem;
+                   font-weight: map-get($fontweight, 
+                "boldWeight");
+                    color: $DarkGrayishViolet;
+                    transition: transform 300ms ease-in-out;
+
+                    &:hover {
+                        color: $VeryDarkViolet;
+                    }
+
+                    &:last-child {
+                        border: 1px solid $DarkGrayishViolet;
+                        color: $VeryDarkViolet;
+                        &:hover {
+                            color: white;
+                            background-color: $VeryDarkViolet;
+                        }
+                    }
+               }
+           }
+           .hamburger-menu {
+               display: none;
+           }
+       }
+   } 
+}

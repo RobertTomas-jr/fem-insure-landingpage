@@ -1,0 +1,122 @@
+@use '../components' as *;
+
+.footer {
+    @include widthheight;
+    background-color: hsl(0, 0%, 98%,);
+    display: grid;
+    place-items: center;
+    margin-top: 9em;
+    background-image: url('/images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    .footer-wrapper {
+        width: clamp(375px, 95%, 1024px);
+        margin: auto;
+    
+        .footer-icon {
+            display: flex;
+            flex-direction: column;
+            padding-top: 5.625em;
+            border-bottom: 1px solid $DarkGrayishViolet; //$GrayishBlue;
+            padding-bottom: 2.5em;
+            width: 95%;
+            margin: auto;
+    
+            .footer-logo {
+                height: 1.125em;
+                width: 7.1875em;
+                margin: auto;
+            }
+            .icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .625em;
+                margin-top: 1.875em;
+                font-size: 1.75em;
+                color: $DarkGrayishViolet;
+                .fa {
+                    cursor: pointer;
+                   @include transitioneaseinout;
+                    &:hover {
+                        color: $VeryDarkViolet;
+                    }
+                } 
+            }
+        }
+        .footer-sublink {
+            width: clamp(375px, 95%, 1024px);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 9em;
+            gap: 1em;
+    
+            .sublink {
+               width: 100%;
+               text-align: center;
+   
+                .link-thead {
+                    margin: 2.75em 0 2em 0;
+                    color: $DarkGrayishViolet;
+                    font-size: 0.875rem;
+                    text-transform: uppercase;
+                   
+                }
+                .links {
+                    .link {
+                        
+                        display: block;
+                        color: $VeryDarkViolet;
+                        line-height: 2.25;
+                        font-size: 0.875rem;
+                        font-weight: map-get($fontweight, "boldWeight");
+                        @include transitioneaseinout;
+                       
+                        &:hover {
+                            text-decoration: underline;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoints(medium) {
+    .footer {
+        background-image: url('/images/bg-pattern-footer-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+
+        .footer-wrapper {
+           .footer-icon {
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+   
+               .footer-logo {
+                   margin-left: 0;
+               }
+               .icons {
+                   margin-top: 0;
+               }
+           }
+           .footer-sublink {
+               flex-direction: row;
+           }
+       }
+    }
+}
+@include breakpoints(large) {
+    .footer {
+        .footer-wrapper {
+            .footer-sublink {
+                .sublink {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
