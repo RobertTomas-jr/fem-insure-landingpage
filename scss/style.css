@@ -33,6 +33,7 @@ header .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 header .header-wrapper .menu {
   width: 100%;
@@ -199,7 +200,7 @@ header .header-wrapper .hamburger-menu .menu-close {
   color: hsl(270deg, 9%, 17%);
   padding-top: 9.375em;
   position: relative;
-  width: clamp(375px, 95%, 1024px);
+  width: clamp(360px, 95%, 1024px);
   margin: auto;
   padding-bottom: 7.5em;
 }
@@ -248,7 +249,7 @@ header .header-wrapper .hamburger-menu .menu-close {
   background-image: url("/images/bg-pattern-how-we-work-mobile.svg");
   background-repeat: no-repeat;
   background-position: top right;
-  width: clamp(375px, 95%, 1024px);
+  width: clamp(360px, 95%, 1024px);
   margin: auto;
 }
 .how-we-work .find-out-more .more {
@@ -292,7 +293,7 @@ header .header-wrapper .hamburger-menu .menu-close {
     background-position: left top;
   }
   .banner .banner-section .banner-content {
-    width: clamp(375px, 95%, 1024px);
+    width: clamp(360px, 95%, 1024px);
     margin: auto;
     flex-direction: row;
     height: 100%;
@@ -331,7 +332,7 @@ header .header-wrapper .hamburger-menu .menu-close {
   }
 
   .how-we-work .we-work {
-    width: clamp(375px, 95%, 1024px);
+    width: clamp(360px, 95%, 1024px);
     margin: auto;
   }
   .how-we-work .we-work .work-services {

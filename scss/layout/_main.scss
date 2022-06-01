@@ -78,7 +78,7 @@
         color: $VeryDarkViolet;
         padding-top: 9.375em;
         position: relative;
-        width: clamp(375px, 95%, 1024px);
+        width: clamp(360px, 95%, 1024px);
         margin: auto;
         padding-bottom: 7.5em;
 
@@ -131,7 +131,7 @@
         background-image: url('/images/bg-pattern-how-we-work-mobile.svg');
         background-repeat: no-repeat;
         background-position: top right;
-        width: clamp(375px, 95%, 1024px);
+        width: clamp(360px, 95%, 1024px);
         margin: auto;
 
         .more {
@@ -178,7 +178,7 @@
             background-position: left top;
         
             .banner-content {
-                width: clamp(375px, 95%, 1024px);
+                width: clamp(360px, 95%, 1024px);
                 margin: auto;
                 flex-direction: row;
                 height: 100%;
@@ -222,7 +222,7 @@
     }
     .how-we-work {
         .we-work {
-            width: clamp(375px, 95%, 1024px);
+            width: clamp(360px, 95%, 1024px);
             margin: auto;
             
             .work-services {
