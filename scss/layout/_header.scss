@@ -3,14 +3,16 @@
 header {
     height: 80px;
     padding: 1.25em 1em;
-    width: clamp(375px, 95%, 1024px);
+    width: clamp(360px, 95%, 1024px);
     margin: auto;
+    overflow: hidden;
         
     .header-wrapper {
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
 
         .menu {
             @include widthheight;

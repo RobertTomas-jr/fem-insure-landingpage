@@ -1,3 +1,4 @@
+const hamburgerBtn = document.querySelector('.hamburger-menu');
 const closeBtn = document.querySelector('.menu-close');
 const openBtn = document.querySelector('.menu-open');
 const menu = document.querySelector('.menu');
@@ -12,4 +13,6 @@ closeBtn.addEventListener('click', () => {
         openBtn.style.display = 'block';
         closeBtn.style.display = 'none';
 })
+
+
 
